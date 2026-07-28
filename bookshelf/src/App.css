@@ -43,7 +43,7 @@ body{
 
 .container p{
     margin-top: 0;
-    margin-bottom: 20px;   /* decrease this if you want it even closer */
+    margin-bottom: 20px;
 }
 
 .upperForm,
@@ -62,7 +62,7 @@ body{
 .upperForm h4{
     margin: 0;
     font-size: 20px;
-    padding: 0;   /* remove the padding-right */    
+    padding: 0;   
 }
 
 .lowerForm input{
@@ -71,12 +71,12 @@ body{
     border-radius: 25px;
     border: 2px solid white;
     background-color: #26413C;
+    padding-left: 10px;
 }
 
 .lowerForm input::placeholder{
     color: white;
     font-size: 15px;
-    padding-left: 8px;
 }
 
 .lowerForm button{
@@ -91,3 +91,4 @@ body{
     background-color: #8AB0AB;
     border: 2px solid #8AB0AB;
 }
+
