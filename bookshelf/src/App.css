@@ -132,3 +132,147 @@ body{
     background-color: transparent;
     /* display: flex; */
 }
+
+.filterBar {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.filterBtn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filterBtn:hover {
+  background-color: #8AB0AB;
+  border-color: #8AB0AB;
+}
+
+.filterBtn.active {
+  background-color: #2E7D32;
+  border-color: #2E7D32;
+}
+
+.filterBtn:focus-visible {
+  outline: 2px solid #8AB0AB;
+  outline-offset: 2px;
+}
+
+.bookList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.bookCard {
+  background-color: #26413C;
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bookCard input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2E7D32;
+  cursor: pointer;
+}
+
+.bookCard input[type="checkbox"]:focus-visible {
+  outline: 2px solid #8AB0AB;
+  outline-offset: 2px;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bookTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bookMeta {
+  font-size: 13px;
+  color: #d8e6e3;
+}
+
+.bookCard.finished .bookTitle {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.removeBtn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 2px solid #ff6b6b;
+  background-color: transparent;
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.removeBtn:focus-visible {
+  outline: 2px solid #ff6b6b;
+  outline-offset: 2px;
+}
+
+.emptyMessage {
+  padding: 20px;
+  text-align: center;
+  color: #d8e6e3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .upperForm,
+  .lowerForm {
+    grid-template-columns: 1fr;
+  }
+
+  .lowerForm input,
+  .lowerForm button {
+    width: 100%;
+  }
+
+  .shelfStat {
+    flex-direction: column;
+  }
+
+  .stat {
+    width: 100%;
+  }
+
+  .bookCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .removeBtn {
+    align-self: flex-end;
+  }
+}

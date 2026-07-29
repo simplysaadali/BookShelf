@@ -16,7 +16,7 @@ function BookForm({onAddBook}){
       pages === "" ||
       Number(pages) <= 0
     ) {
-      setError("Please fill all fields correctly.");
+      setError("Please Enter Valid Inputs :)");
       return;
     } 
     const newBook = {
@@ -28,6 +28,7 @@ function BookForm({onAddBook}){
     };
 
     onAddBook(newBook);
+
     setTitle("");
     setAuthor("");
     setPages("");
