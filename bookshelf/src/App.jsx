@@ -19,6 +19,10 @@ function App(){
     .filter((book) => book.finished)
     .reduce((sum, book) => sum + book.pages, 0);
 
+  const removeBook = (id) => {
+    setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
+  };
+
   const toggleFinished = (id) =>{
     setBooks((prevBooks) =>
       prevBooks.map((book) =>
@@ -26,10 +30,6 @@ function App(){
       )
     );
   }
-
-  const removeBook = (id) => {
-    setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
-  };
 
   const filteredBooks = books.filter((book) => {
     if (filter === "Reading") return !book.finished;
